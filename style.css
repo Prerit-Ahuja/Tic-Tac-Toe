@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    background-color: black;
+    height: 80px;
+}
+
+.title__heading{
+    text-align: center;
+    padding: 25px;
+    color: aliceblue;
+    width: 300px;
+    margin: 0 auto;
+    animation-name: title-animate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes title-animate{
+    from{transform: scale(1);}
+    to{transform: scale(1.1);}
+}
+
+.main__container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.8),  rgba(0, 0, 0, 0.8)), url("./img/bg-img.jpg");
+    /* background-size: cover; */
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* z-index: -10; */
+}
+
+.grid__container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+
+.grid__container .box{
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: aqua;
+    font-size: 4vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 20px white;
+}
+
+.box:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.box__content{
+    color: aliceblue;
+}
+
+.game__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.info{
+    font-size: 30px;
+    color: aliceblue;
+    background-color: black;
+}
+
+.show{
+    opacity: 1;
+}
+
+.hide{
+    opacity: 0;
+    z-index: -1;
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+.win__content{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    flex-direction: column;
+    transition: 1s;
+    transform: scale(1.1);
+    position: fixed;
+    top: 0;
+}
+
+.win__content .winning__text{
+    font-size: 45px;
+    color: red;
+    font-weight: 600;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    animation-name: won-animate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes won-animate{
+    from{ color: red;}
+    to{ color: yellow;}
+    from{transform: scale(1);}
+    to{transform: scale(1.1);}
+}
+
+.restart{
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.restart:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    background-color: blue;
+    color: white;
+}
+
+.bg-orange{
+    background-color: orange;
+}
+
+
+/* media queries */
+
+@media(min-width: 280px){
+    .grid__container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+        margin-top: 80px;
+    }
+    .box__content{
+        font-size: 40px;
+    }
+}
+
+@media(min-width: 540px){
+    .grid__container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+        margin-top: 30px;
+    }
+    .box__content{
+        font-size: 70px;
+    }
+}
+
+@media(min-width: 700px){
+    .grid__container{
+        grid-template-columns: repeat(3, 10vw);
+        grid-template-rows: repeat(3, 10vw);
+    }
+    .box__content{
+        font-size: 70px;
+    }
+}

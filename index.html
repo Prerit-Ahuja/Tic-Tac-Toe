@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- custom stylesheet -->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="main__container">
+      <div class="title">
+        <h1 class="title__heading">TIC TAC TOE</h1>
+      </div>
+
+        <div class="container">
+          <div class="grid__container">
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+              <div class="box"><span class="box__content"></span></div>
+          </div>
+        </div>
+
+          <div class="game__content">
+            <div>
+                <span class="info">Turn For <i class="fa-regular fa-circle"></i></span>
+            </div>
+          </div>
+
+          <div class="win__content hide">
+            <div class="winning__text"></div>
+            <button id="restart" class="restart">Restart</button>
+          </div>
+          
+      </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
